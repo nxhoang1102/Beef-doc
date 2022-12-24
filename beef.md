@@ -4,7 +4,7 @@
   - [Browser](#browser)
     - [Apache Tomcat RequestHeaderExample Cookie Disclosure](#apache-tomcat-requestheaderexample-cookie-disclosure)
     - [Detect Foxit Reader](#detect-foxit-reader)
-    - [](#detect-lastpass)
+    - [Detect LastPass](#detect-lastpass)
     - [Detect MIME Types](#detect-mime-types)
     - [Detect QuickTime](#detect-quicktime)
     - [Detect RealPlayer](#detect-realplayer)
