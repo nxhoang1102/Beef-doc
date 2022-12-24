@@ -1067,86 +1067,113 @@
 
 - Sẽ khai thác tham số gọi lại chưa được lọc trong điểm cuối JSONP (của cùng một miền bị xâm phạm) để đảm bảo rằng BeEF sẽ kết nối mỗi khi người dùng truy cập lại miền
 
-## Phoneap
-
-### Alert User
-
-### Beep
-
-### Check Connection
-
-### Detect PhoneGap
-
-### Geolocation
-
-### Globalization Status
-
-### Keychain
-
-### List Contacts
-
-### List Files
-
-### List Plugins
-
-### Persist resume
-
-### Persistence
-
-### Prompt User
-
-### Start Recording Audio
-
-### Stop Recording Audio
-
-### Upload File
-
 ## Social Engineering
 
 ### Text to Voice
 
+- Chuyển đổi văn bản sang mp3 và phát nó trên trình duyệt được kết nối.
+- Lưu ý: mô-đun này yêu cầu cài đặt Lame và eSpeak.
+
 ### Clickjacking
+
+- Cho phép bạn thực hiện clickjacking nhiều lần nhấp cơ bản.
+- Khung nội tuyến đi theo con chuột, do đó, bất cứ nơi nào người dùng nhấp vào trang sẽ ở trên x-pos,y-pos.
+- Các giá trị cấu hình JS tùy chọn chỉ định Javascript cục bộ sẽ thực thi khi người dùng nhấp vào, cho phép trang có thể đưa ra phản hồi trực quan.
+- Cuộc tấn công dừng lại khi y-pos được đặt thành giá trị không phải là số (ví dụ: dấu gạch ngang).
+- Để có bản demo, hãy truy cập /demos/clickjacking/clickjack_attack.html với các cài đặt mặc định (dựa trên trình duyệt, chúng có thể phải được điều chỉnh).
 
 ### Lcamtuf Download
 
+- Cố gắng thực hiện tải xuống lcamtuf. Tệp sẽ được cung cấp với tiêu đề Content-Bố trí: tệp đính kèm thay thế. Để biết thêm thông tin, vui lòng tham khảo http://lcamtuf.blogspot.co.uk/2012/05/yes-you-can-have-fun-with-downloads.html .
+
 ### Spoof Address Bar (data URL)
+
+- Chuyển hướng trình duyệt tới một URL tìm kiếm hợp pháp với sơ đồ ''dữ liệu'', chẳng hạn như ''data:text/html,http://victim.com'', với móc nối BeEF và URL do người dùng chỉ định trong iframe 100% x 100%.
 
 ### Clippy
 
+- Hiển thị một hình ảnh clippy và yêu cầu người dùng thực hiện công việc.
+- Người dùng chấp nhận được nhắc tải xuống tệp thực thi.
+- Bạn có thể gắn exe trong BeEF theo tiện ích mở rộng/social_engineering/droppers/readme.txt.
+
 ### Fake Flash Update
+
+- Nhắc người dùng cài đặt bản cập nhật cho Adobe Flash Player.
+- Tải trọng được phân phối có thể là tệp tùy chỉnh, tiện ích mở rộng trình duyệt hoặc bất kỳ URI cụ thể nào.
+- Tiện ích mở rộng BeEF Firefox được cung cấp sẽ vô hiệu hóa PortBanning (cổng 20, 21, 22, 25, 110, 143), bật Java, ghi đè UserAgent và các trang home/new_tab mặc định.
+- Xem thư mục /extensions/ipec/files/LinkTargetFinder để biết mã nguồn tiện ích mở rộng của Firefox.
+- Việc phân phối tiện ích mở rộng của Chrome hoạt động trên Chrome <= 20.
+- Từ Chrome 21, mọi thứ đã thay đổi về cách có thể tải tiện ích mở rộng.
+- Xem /extensions/demos/flash_update_chrome_extension/manifest.json để biết thêm thông tin và tiện ích mở rộng mẫu hoạt động trên Chrome mới nhất.
 
 ### Fake Notification Bar
 
+- Hiển thị thanh thông báo giả mạo ở đầu màn hình, tương tự như thanh thông báo được trình bày trong IE.
+
 ### Fake Notification Bar (Chrome)
+
+- Hiển thị thanh thông báo giả mạo ở đầu màn hình, tương tự như thanh thông báo trong Chrome.
+- Nếu người dùng nhấp vào thông báo, họ sẽ được nhắc tải xuống tệp được chỉ định bên dưới.
+- Bạn có thể gắn exe trong BeEF theo tiện ích mở rộng/social_engineering/droppers/readme.txt.
 
 ### Fake Notification Bar (Firefox)
 
+- Hiển thị thanh thông báo giả mạo ở đầu màn hình, tương tự như thanh thông báo trong Firefox.
+- Nếu người dùng nhấp vào thông báo, họ sẽ được nhắc tải xuống tiện ích mở rộng độc hại của Firefox (theo mặc định).
+
 ### Fake Notification Bar (IE)
+
+- Hiển thị thanh thông báo giả mạo ở đầu màn hình, tương tự như thanh thông báo được trình bày trong IE.
+- Nếu người dùng nhấp vào thông báo, họ sẽ được nhắc tải xuống tệp được chỉ định bên dưới. Bạn có thể gắn exe trong BeEF theo tiện ích mở rộng/social_engineering/droppers/readme.txt.
 
 ### Google Phishing
 
+- Plugin này sử dụng thẻ hình ảnh để XSRF nút đăng xuất của Gmail.
+- Liên tục người dùng bị đăng xuất khỏi Gmail (ví dụ: nếu anh ta đăng nhập trong một tab khác).
+- Ngoài ra, nó sẽ hiển thị biểu tượng yêu thích của Google và trang lừa đảo Gmail (mặc dù URL KHÔNG phải là URL Gmail).
+
 ### Pretty Theft
+
+- Hỏi người dùng tên người dùng và mật khẩu của họ bằng cách sử dụng div nổi.
+- Facebook, LinkIn, Windows, Youtube, Yammer, IOS, Generic
 
 ### Replace Videos (Fake Plugin)
 
+- Thay thế một đối tượng được chọn bằng jQuery (tất cả các thẻ nhúng theo mặc định) bằng một hình ảnh khuyên người dùng cài đặt plugin bị thiếu. Nếu người dùng nhấp vào hình ảnh, họ sẽ được nhắc tải xuống tiện ích mở rộng độc hại của Firefox (theo mặc định).
+
 ### Simple Hijacker
+
+- Hijack bấm vào liên kết để hiển thị những gì bạn muốn.
 
 ### TabNabbing
 
+- Chuyển hướng đến URL được chỉ định sau khi tab không hoạt động trong một khoảng thời gian được chỉ định.
+
 ### Edge WScript WSH Injection
+
+- Nhắc người dùng chạy "Microsoft Windows Based Script Host" (WScript.exe).
+- Sử dụng kỹ thuật xử lý giao thức wshfile để tải pubprn.vbs và WSH injection trong pubprn.vbs để thực thi mã tùy ý.
+- Nếu người dùng cho phép thực thi, tải trọng VBS sẽ được tải xuống từ BeEF và các lệnh được chỉ định sẽ được thực thi.
 
 ### Fake Evernote Web Clipper Login
 
+- Hiển thị hộp thoại đăng nhập Evernote Web Clipper giả mạo.
+
 ### Fake LastPass
+
+- Hiển thị hộp thoại người dùng LastPass giả mạo.
 
 ### Firefox Extension (Bindshell)
 
+- Tạo nhanh tiện ích mở rộng Firefox độc hại liên kết trình bao với một cổng được chỉ định.
+- Tiện ích mở rộng dựa trên tác phẩm gốc của Michael Schierl và mô-đun Metasploit của anh ấy, cũng như tải trọng Firefox của joev cho Metasploit.
+
 ### Firefox Extension (Dropper)
+
+- Tạo ngay một tiện ích mở rộng độc hại của Firefox nhúng một dropper mà bạn có thể chỉ định (thêm nó vào thư mục 'dropper').
+- Phần mở rộng dựa trên tác phẩm gốc của Michael Schierl và mô-đun Metasploit của anh ấy.
 
 ### Firefox Extension (Reverse Shell)
 
-### HTA PowerShell
-
-### SiteKiosk Breakout
-
-### User Interface Abuse (IE 9/10)
+- Tạo nhanh một tiện ích mở rộng độc hại của Firefox tạo kết nối shell ngược với một máy chủ: cổng được chỉ định.
+- Tiện ích mở rộng dựa trên tác phẩm gốc của Michael Schierl và mô-đun Metasploit của anh ấy, cũng như tải trọng Firefox của joev cho Metasploit.
