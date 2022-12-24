@@ -198,9 +198,6 @@
     - [Firefox Extension (Bindshell)](#firefox-extension-bindshell)
     - [Firefox Extension (Dropper)](#firefox-extension-dropper)
     - [Firefox Extension (Reverse Shell)](#firefox-extension-reverse-shell)
-    - [HTA PowerShell](#hta-powershell)
-    - [SiteKiosk Breakout](#sitekiosk-breakout)
-    - [User Interface Abuse (IE 9/10)](#user-interface-abuse-ie-910)
 
 ## Browser
 
@@ -641,18 +638,38 @@
 ### DNS Tunnel
 
 - Gửi dữ liệu một chiều qua DNS, chỉ máy khách đến máy chủ. Máy chủ DNS của BeEF được sử dụng để tái tạo lại các khối dữ liệu được loại bỏ qua DNS.
+- Input
+
+![](assets/dns-tunnel.png)
+
+- Output
+
+![](assets/dns-tunnel-output.png)
 
 ### Return Ascii Chars
 
 - Trả về bộ ký tự ascii.
+- Output
+
+![](assets/return-ascii-char.png)
 
 ### Return Image
 
 - Trả về hình ảnh PNG dưới dạng chuỗi mã hóa base64. Hình ảnh phải được hiển thị trong giao diện web BeEF.
+- Output
+
+![](assets/return-image.png)
 
 ### Test CORS Request
 
 - Kiểm tra chức năng beef.net.cors.request bằng cách truy xuất một URL.
+- Output
+
+![](assets/test-cors-request.png)
+
+- Input
+
+![](assets/test-cors-output.png)
 
 ### Test HTTP Request
 
@@ -661,42 +678,79 @@
 ### Test JS variable passing
 
 - Kiểm tra biến JS chuyển từ tập lệnh của BeEF khác qua đối tượng Window
+- Output
+
+![](assets/test-js-variable-passing.png)
 
 ### Test Netword Request
 
 - Kiểm tra chức năng beef.net.request bằng cách truy xuất một URL.
+- Input
+
+![](assets/test-network-request1.png)
+
+- Output
+
+![](assets/test-network-request-output.png)
 
 ### Test Reuturning Results
 
 - Trả về một chuỗi có độ dài được chỉ định.
+- Input
+
+![](assets/test-returning-result.png)
+
+- Output
+
+![](assets/test-returning-result-output.png)
 
 ### Test beef.debug()
 
 - Kiểm tra chức năng 'beef.debug()'. Chức năng này kết thúc tốt đẹp 'console.log()'
+- Output
 
-## Exploits
+![](assets/test-beef-debug-message.png)
 
 ## Host
 
 ### Detect Antivirus
 
 - Tự động phát hiện mã javascript được bao gồm bởi một số AV (hiện hỗ trợ phát hiện cho Kaspersky, Avira, Avast (ASW), BitDefender, Norton, Dr. Web)
+- Output
+
+![](assets/detect-anti-virus.png)
 
 ### Detect CUPS
 
 - Cố gắng phát hiện Hệ thống In UNIX Chung (CUPS) trên máy chủ cục bộ trên cổng mặc định 631.
+- Output
+
+![](assets/detect-cups.png)
 
 ### Detect Coupon Printer
 
 - Cố gắng phát hiện Máy in phiếu giảm giá trên máy chủ cục bộ trên cổng WebSocket mặc định 4004.
+- Output
+
+![](assets/detect-coupon-printer.png)
 
 ### Detect Google Desktop
 
 - Cố gắng phát hiện Google Desktop đang chạy trên cổng mặc định 4664.
+- Output
+
+![](assets/detect-google-desktop.png)
 
 ### Get Geolocation (Third-Party)
 
 - Truy xuất vị trí thực của trình duyệt được kết nối bằng cách sử dụng API định vị địa lý do bên thứ ba lưu trữ.
+- Input
+
+![](assets/get-geo-location-input.png)
+
+- Output
+
+![](assets/get-geo-location.png)
 
 ### Hook Default Browser
 
@@ -729,12 +783,18 @@
 
 - Sẽ sử dụng trình xử lý giao thức microsoft-edge để cố gắng kết nối Microsoft Edge (giả sử nó hiện chưa được kết nối).
 - Lưu ý: người dùng sẽ được nhắc mở Microsoft Edge.
+- Output
+
+![](assets/hooked-microsorft-edge.png)
 
 ### Get Internal IP (Java)
 
 - Truy xuất địa chỉ IP giao diện mạng cục bộ của máy nạn nhân bằng Java applet chưa được ký.
 - Trình duyệt phải được bật và định cấu hình Java để cho phép thực thi các Java applet chưa được ký.
 - Lưu ý rằng Java hiện đại (kể từ Java 7u51) sẽ hoàn toàn từ chối thực thi các Java applet chưa ký và cũng sẽ từ chối các Java applet tự ký trừ khi chúng được thêm vào danh sách ngoại lệ.
+- Output
+
+![](assets/get-internal-ip-address.png)
 
 ### Detect Airdroid
 
@@ -747,6 +807,9 @@
 ### Detect Hewlett-Packard
 
 - Cố gắng phát hiện phần mềm được cài đặt theo mặc định trên hệ thống HP. Nó sử dụng trình xử lý giao thức 'res' chỉ hoạt động trên Internet Explorer.
+- Output
+
+![](assets/detect-hp.png)
 
 ### Detect Local Drives
 
@@ -774,6 +837,9 @@
 ### Get Internal IP WebRTC
 
 - Truy xuất địa chỉ IP nội bộ (đằng sau NAT) của máy nạn nhân bằng cách sử dụng khung kết nối ngang hàng WebRTC. Mã từ http://net.ipcalf.com/
+- Output
+
+![](assets/internal-ip-webrtc.PNG)
 
 ### Get Network Connection Type
 
@@ -844,6 +910,15 @@
 
 - Tạo lớp phủ iFrame 100% x 100% với ghi nhật ký sự kiện.
 - Nội dung của lớp phủ được đặt trong tùy chọn 'iFrame Src'.
+- Input
+
+![](assets/iframe-event-key-logger-input.PNG)
+
+- Output
+
+![](assets/iframe-event-key-logger-output2.PNG)
+
+![](assets/iframe-event-key-logger-output1.PNG)
 
 ### Local File Theft
 
@@ -861,6 +936,13 @@
 ### BlockUI Modal Dialog
 
 - Sử dụng jQuery BlockUI để chặn cửa sổ và hiển thị thông báo.
+- Input
+
+![](assets/blockui-input.PNG)
+
+- Output
+
+![](assets/blockui-output.PNG)
 
 ### Crypto-Loot Miner
 
@@ -870,6 +952,13 @@
 ### Raw JavaScript
 
 - Gửi mã đã nhập trong phần 'Mã JavaScript' tới các trình duyệt được kết nối đã chọn, nơi mã sẽ được thực thi. Mã được chạy bên trong một hàm ẩn danh và giá trị trả về được chuyển đến khung. Tập lệnh nhiều dòng được cho phép, không yêu cầu mã hóa đặc biệt.
+- Input
+
+![](assets/raw-js-input.PNG)
+
+- Output
+
+![](assets/raw-js-output.PNG)
 
 ### Read Gmail
 
@@ -1084,7 +1173,16 @@
 
 ### Lcamtuf Download
 
-- Cố gắng thực hiện tải xuống lcamtuf. Tệp sẽ được cung cấp với tiêu đề Content-Bố trí: tệp đính kèm thay thế. Để biết thêm thông tin, vui lòng tham khảo http://lcamtuf.blogspot.co.uk/2012/05/yes-you-can-have-fun-with-downloads.html .
+- Cố gắng thực hiện tải xuống lcamtuf.
+- Tệp sẽ được cung cấp với tiêu đề Content-Bố trí: tệp đính kèm thay thế.
+- Để biết thêm thông tin, vui lòng tham khảo http://lcamtuf.blogspot.co.uk/2012/05/yes-you-can-have-fun-with-downloads.html .
+- Input
+
+![](assets/lcamtuf-download-input.PNG)
+
+- Output
+
+![](assets/lcamtuf-download-output.PNG)
 
 ### Spoof Address Bar (data URL)
 
@@ -1095,6 +1193,13 @@
 - Hiển thị một hình ảnh clippy và yêu cầu người dùng thực hiện công việc.
 - Người dùng chấp nhận được nhắc tải xuống tệp thực thi.
 - Bạn có thể gắn exe trong BeEF theo tiện ích mở rộng/social_engineering/droppers/readme.txt.
+- Input
+
+![](assets/clippy-input.PNG)
+
+- Output
+
+![](assets/clippy-output.PNG)
 
 ### Fake Flash Update
 
@@ -1109,12 +1214,26 @@
 ### Fake Notification Bar
 
 - Hiển thị thanh thông báo giả mạo ở đầu màn hình, tương tự như thanh thông báo được trình bày trong IE.
+- Input
+
+![](assets/fake-notification-input.PNG)
+
+- Output
+
+![](assets/fake-notification-output.PNG)
 
 ### Fake Notification Bar (Chrome)
 
 - Hiển thị thanh thông báo giả mạo ở đầu màn hình, tương tự như thanh thông báo trong Chrome.
 - Nếu người dùng nhấp vào thông báo, họ sẽ được nhắc tải xuống tệp được chỉ định bên dưới.
 - Bạn có thể gắn exe trong BeEF theo tiện ích mở rộng/social_engineering/droppers/readme.txt.
+- Input
+
+![](assets/fake-notification-bar-chrome-input.PNG)
+
+- Output
+
+![](assets/fake-notification-bar-chrome-output.PNG)
 
 ### Fake Notification Bar (Firefox)
 
@@ -1144,6 +1263,15 @@
 ### Simple Hijacker
 
 - Hijack bấm vào liên kết để hiển thị những gì bạn muốn.
+- Input
+
+![](assets/simple-hijacker-input.PNG)
+
+- Output
+
+![](assets/simple-hijacker-output.PNG)
+
+![](assets/simple-hijacker-output2.PNG)
 
 ### TabNabbing
 
